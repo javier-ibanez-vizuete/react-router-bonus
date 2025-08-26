@@ -9,37 +9,38 @@ import { PrivateRoute } from "./components/PrivateRoute";
 import { ProductsPage } from "./pages/ProductsPage";
 import { ProductItemPage } from "./pages/ProductItemPage";
 import { HomePage } from "./pages/HomePage";
+import "./App.css";
 
 export const App = () => {
-    return (
-        <div className="app-container">
-            <NavBar />
+	return (
+		<div className="app-container">
+			<NavBar />
 
-            <main className="main">
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/about" element={<AboutPage />} />
+			<main className="main">
+				<Routes>
+					<Route path="/" element={<HomePage />} />
+					<Route path="/contact" element={<ContactPage />} />
+					<Route path="/about" element={<AboutPage />} />
 
-                    <Route path="/services" element={<ServicesPage />}>
-                        <Route path="/services/freelance" element={<FreelanceServices />} />
-                        <Route path="/services/consulting" element={<ConsultingServices />} />
-                    </Route>
+					<Route path="/services" element={<ServicesPage />}>
+						<Route path="/services/freelance" element={<FreelanceServices />} />
+						<Route path="/services/consulting" element={<ConsultingServices />} />
+					</Route>
 
-                    <Route path="/products" element={<ProductsPage />} />
-                    <Route path="/products/:id" element={<ProductItemPage />} />
+					<Route path="/products" element={<ProductsPage />} />
+					<Route path="/products/:id" element={<ProductItemPage />} />
 
-                    <Route element={<PrivateRoute />}>
-                        <Route path="/private-1" element={<h1>Ruta Privada</h1>} />
-                    </Route>
+					<Route element={<PrivateRoute />}>
+						<Route path="/private-1" element={<h1>Ruta Privada</h1>} />
+					</Route>
 
-                    <Route path="*" element={<h1>404 - Ruta no encontrada</h1>} />
-                </Routes>
-            </main>
+					<Route path="*" element={<h1>404 - Ruta no encontrada</h1>} />
+				</Routes>
+			</main>
 
-            <footer className="footer">
-                <h2>Footer de la web</h2>
-            </footer>
-        </div>
-    );
+			<footer className="footer">
+				<h2>Footer de la web</h2>
+			</footer>
+		</div>
+	);
 };

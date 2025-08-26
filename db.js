@@ -142,7 +142,7 @@ export const db = {
             description: "Cierre ajustable, unisex.",
             categoryId: "4",
             stock: 100,
-            rating: 4.5,
+            rating: 4,
             image: "https://picsum.photos/seed/gorra1/1200/120",
             tags: ["gorra", "clásica"],
             createdAt: "2025-07-10T08:00:00Z",
